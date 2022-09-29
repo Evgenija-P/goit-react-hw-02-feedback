@@ -1,17 +1,36 @@
-// import React from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-// export const FeedbackOptions = options => {
-//   return (
-//     <div>
-//       <button tupe="button" onClick={options.this.buttonGood}>
-//         Good
-//       </button>
-//       <button tupe="button" onClick={options.this.buttonNeutral}>
-//         Neutral
-//       </button>
-//       <button tupe="button" onClick={options.this.buttonBad}>
-//         Bad
-//       </button>
-//     </div>
-//   );
-// };
+import { Button } from './FeedbackOptions.styled';
+
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+  return (
+    <div>
+      {options.map(btnTitle => (
+        <Button
+          type="button"
+          key={btnTitle}
+          btnTitle={btnTitle}
+          style={{ backgroundColor: getRandomColor(btnTitle) }}
+          onClick={() => onLeaveFeedback(btnTitle)}
+        >
+          {btnTitle}
+        </Button>
+      ))}
+    </div>
+  );
+};
+
+function getRandomColor(btnTitle) {
+  if (btnTitle === 'good') {
+    return 'green';
+  } else if (btnTitle === 'neutral') {
+    return 'orange';
+  }
+  return 'red';
+}
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
