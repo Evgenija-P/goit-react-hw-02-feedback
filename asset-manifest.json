@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/test-homewort/static/css/main.7acaea2f.css",
-    "main.js": "/test-homewort/static/js/main.c9301846.js",
+    "main.js": "/test-homewort/static/js/main.d3e5cd24.js",
     "index.html": "/test-homewort/index.html",
     "main.7acaea2f.css.map": "/test-homewort/static/css/main.7acaea2f.css.map",
-    "main.c9301846.js.map": "/test-homewort/static/js/main.c9301846.js.map"
+    "main.d3e5cd24.js.map": "/test-homewort/static/js/main.d3e5cd24.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.c9301846.js"
+    "static/js/main.d3e5cd24.js"
   ]
 }
